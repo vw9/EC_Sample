@@ -1,2 +1,22 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1>Sign in</h1>
+<%= form_for @user do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.label :kana %>
+<%= f.text_field :kana %>
+
+<%= f.label :mail %>
+<%= f.text_field :mail %>
+
+<%= f.label :postal_code %>
+<%= f.text_field :postal_code %>
+
+<%= f.label :address %>
+<%= f.text_field :address %>
+
+<%= f.submit "登録" %>
+<% end %>
+
+<%= link_to "ログインはこちら" %>

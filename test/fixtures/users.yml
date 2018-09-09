@@ -1,15 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  mail: MyString
-  kana: MyString
-  postal_code: MyString
-  address: MyString
+  id: 1
+  name: 田中邦衛
+  mail: exsample@co.jp
+  kana: タナカクニエ
+  postal_code: 1301234
+  address: 東京都品川区東大井3-3-3
 
 two:
-  name: MyString
-  mail: MyString
-  kana: MyString
-  postal_code: MyString
-  address: MyString
+  id: 2
+  name: 織田裕二
+  mail: yuji_oda@co.jp
+  kana: オダユウジ
+  postal_code: 4392211
+  address: 東京都大田区本郷1-1-1

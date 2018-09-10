@@ -5,12 +5,17 @@ class UsersController < ApplicationController
 
   def create
     binding.pry
-    @user = User.new(name: params[:user][:name], kana: params[:user][:kana], mail: params[:user][:mail], postal_code: params[:user][:postal_code], address: params[:user][:address])
+    @user = User.new(user_params)
     if @user.save
       redirect_to root_path, success: "登録が完了しました"
     else
       flash.now[:danger] = "登録に失敗しました"
       render :new
     end
+  end
+
+  private
+  def user_params
+    params.require(:user).permit(:name, :kana, :mail, :postal_code, :address)
   end
 end

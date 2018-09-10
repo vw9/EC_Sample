@@ -14,6 +14,12 @@
       <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
     <% end %>
 
+    <%= link_to 'Home', root_path %>
+    <%= link_to 'Sign in', new_user_path %>
+    <%= link_to 'Log in', login_path %>
+    <%= link_to 'Shop info', '#' %>
+    <%= link_to 'Contact', '#' %>
+
     <%= yield %>
 
     <script>

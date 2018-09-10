@@ -1,0 +1,13 @@
+<h1>Log in</h1>
+
+<%= form_for :session, url: login_path do |f| %>
+
+<%= f.label :mail %>
+<%= f.text_field :mail %>
+
+<%= f.label :password %>
+<%= f.password_field :password %>
+
+<%= f.submit "ログイン" %>
+
+<% end %>

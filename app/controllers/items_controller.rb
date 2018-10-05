@@ -8,4 +8,9 @@ class ItemsController < ApplicationController
     @item = Item.new
   end
 
+  def enum
+    @item = Item.find(1)
+    @item.published!
+  end
+
 end

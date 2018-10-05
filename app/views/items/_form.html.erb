@@ -20,15 +20,15 @@
       </tr>
       <tr>
         <td><%= f.label :brand %></td>
-        <td><%= f.number_field :brand %></td>
+        <td><%= f.select :brand, Item.brands.keys.to_a, {} %></td>
       </tr>
       <tr>
         <td><%= f.label :category %></td>
-        <td><%= f.number_field :category %></td>
+        <td><%= f.select :category, Item.categories.keys.to_a, {} %></td>
       </tr>
       <tr>
         <td><%= f.label :country %></td>
-        <td><%= f.number_field :country %></td>
+        <td><%= f.select :country, Item.countries.keys.to_a, {} %></td>
       </tr>
   </tbody>
 </table>

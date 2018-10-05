@@ -1,0 +1,36 @@
+<%= form_for(item) do |f| %>
+
+<table>
+  <tbody>
+      <tr>
+        <td><%= f.label :image %></td>
+        <td><%= f.text_field :image %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :name %></td>
+        <td><%= f.text_field :name %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :price %></td>
+        <td><%= f.number_field :price %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :body %></td>
+        <td><%= f.text_field :body %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :brand %></td>
+        <td><%= f.number_field :brand %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :category %></td>
+        <td><%= f.number_field :category %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :country %></td>
+        <td><%= f.number_field :country %></td>
+      </tr>
+  </tbody>
+</table>
+
+<% end %>

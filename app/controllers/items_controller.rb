@@ -13,6 +13,9 @@ class ItemsController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
   def create
     @item = Item.new(item_params)
 
@@ -21,6 +24,16 @@ class ItemsController < ApplicationController
         format.html { redirect_to new_item_path, notice: 'Item was Successfully created.' }
       else
         format.html { render :new }
+      end
+    end
+  end
+
+  def update
+    respond_to do |format|
+      if @item.update(item_params)
+        format.html { redirect_to @item, notice: 'Item was successfully updated.' }
+      else
+        format.html { render :edit }
       end
     end
   end

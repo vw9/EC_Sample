@@ -3,4 +3,5 @@ class Item < ApplicationRecord
   enum category: { OUTER:0, TOPS:1, BOTOMS:2, SHOES:3 }
   enum country: { JPN:0, USA:1, GTR:2, DEU:3, FRA:4, ITA:5 }
   mount_uploader :image, ImageUploader
+  has_many :colors
 end

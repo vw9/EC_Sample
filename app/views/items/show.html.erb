@@ -35,5 +35,12 @@
   <%= @item.country %>
 </p>
 
+<p>
+  <strong>Color:</strong>
+  <% @item.colors.each do |color| %>
+    <%= color.color %>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_item_path(@item) %>
 <%= link_to 'Back', items_path %>

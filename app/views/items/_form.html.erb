@@ -30,6 +30,10 @@
         <td><%= f.label :country %></td>
         <td><%= f.select :country, Item.countries.keys.to_a, {} %></td>
       </tr>
+      <tr>
+        <td><%= f.label "colors" %></td>
+        <td><input type="text" name="color"></input></td>
+      </tr>
   </tbody>
 </table>
 

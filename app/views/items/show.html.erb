@@ -2,7 +2,7 @@
 
 <p>
   <strong>Image:</strong>
-  <%= image_tag @item.image.to_s %>
+  <%= image_tag @item.image.url %>
 </p>
 
 <p>
@@ -42,5 +42,11 @@
   <% end %>
 </p>
 
+<p>
+  <strong>Size:</strong>
+   <% convert_str(@item.category_before_type_cast, @item.country_before_type_cast).each do |c| %>
+   <%= c %>
+   <% end %>
+</p>
 <%= link_to 'Edit', edit_item_path(@item) %>
 <%= link_to 'Back', items_path %>

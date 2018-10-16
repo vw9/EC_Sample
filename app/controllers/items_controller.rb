@@ -46,7 +46,42 @@ class ItemsController < ApplicationController
     end
   end
 
+#ここからカテゴリー別一覧
+  def outer_index
+    @items = Item.where(category: 0).includes(:colors)
+  end
 
+  def tops_index
+    @items = Item.where(category: 1).includes(:colors)
+  end
+
+  def botoms_index
+    @items = Item.where(category: 2).includes(:colors)
+  end
+
+  def shoes_index
+    @items = Item.where(category: 3).includes(:colors)
+  end
+
+  def a_index
+    @items = Item.where(brand: 0).includes(:colors)
+  end
+
+  def b_index
+    @items = Item.where(brand: 1).includes(:colors)
+  end
+
+  def c_index
+    @items = Item.where(brand: 2).includes(:colors)
+  end
+
+  def d_index
+    @items = Item.where(brand: 3).includes(:colors)
+  end
+
+  def e_index
+    @items = Item.where(brand: 4).includes(:colors)
+  end
 
   private
 

@@ -1,0 +1,42 @@
+<p id="notice"><%#= notice %></p>
+
+<h1>一覧画面</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>name</th>
+      <th>Price</th>
+      <th>Body</th>
+      <th>Brand</th>
+      <th>Category</th>
+      <th>Country</th>
+      <th>Color</th>
+    </tr>
+  </theda>
+
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <td><%= image_tag(item.image.url) %></td>
+        <td><%= item.name %></td>
+        <td><%= item.price %></td>
+        <td><%= item.body %></td>
+        <td><%= item.brand %></td>
+        <td><%= item.category %></td>
+        <td><%= item.country %></td>
+    <% item.colors.each do |color| %>
+        <td><%= color.color %></td>
+        <td><%= link_to 'Show', item %></td>
+        <td><%= link_to 'Edit', edit_item_path(item) %></td>
+        <td><%= link_to 'Destroy', item, { method: :delete, data: { confirm: 'Are you sure?' } } %></td>
+      </tr>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Item', new_item_path %>

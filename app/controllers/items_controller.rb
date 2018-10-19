@@ -2,8 +2,9 @@ class ItemsController < ApplicationController
 
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
+
   def index
-    @items = Item.all.includes(:colors)
+  @items = Item.page(params[:page]).per(3).includes(:colors)
   end
 
   def new
@@ -48,39 +49,40 @@ class ItemsController < ApplicationController
 
 #ここからカテゴリー別一覧
   def outer_index
-    @items = Item.where(category: 0).includes(:colors)
+    @items = Item.page(params[:page]).per(3).where(category: 0).includes(:colors)
   end
 
   def tops_index
-    @items = Item.where(category: 1).includes(:colors)
+    @items = Item.page(params[:page]).per(3).where(category: 1).includes(:colors)
   end
 
   def botoms_index
-    @items = Item.where(category: 2).includes(:colors)
+    @items = Item.page(params[:page]).per(3).where(category: 2).includes(:colors)
   end
 
   def shoes_index
-    @items = Item.where(category: 3).includes(:colors)
+    @items = Item.page(params[:page]).per(3).where(category: 3).includes(:colors)
   end
 
+#ここからブランド別一覧
   def a_index
-    @items = Item.where(brand: 0).includes(:colors)
+    @items = Item.page(params[:page]).per(3).where(brand: 0).includes(:colors)
   end
 
   def b_index
-    @items = Item.where(brand: 1).includes(:colors)
+    @items = Item.page(params[:page]).per(3).where(brand: 1).includes(:colors)
   end
 
   def c_index
-    @items = Item.where(brand: 2).includes(:colors)
+    @items = Item.page(params[:page]).per(3).where(brand: 2).includes(:colors)
   end
 
   def d_index
-    @items = Item.where(brand: 3).includes(:colors)
+    @items = Item.page(params[:page]).per(3).where(brand: 3).includes(:colors)
   end
 
   def e_index
-    @items = Item.where(brand: 4).includes(:colors)
+    @items = Item.page(params[:page]).per(3).where(brand: 4).includes(:colors)
   end
 
   private
